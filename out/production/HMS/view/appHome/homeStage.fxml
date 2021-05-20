@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="basePane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.appHome.HomeStageController">
+   <children>
+      <AnchorPane prefHeight="150.0" prefWidth="1000.0" style="-fx-background-color: #141937;" AnchorPane.bottomAnchor="550.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuButton layoutX="887.0" layoutY="25.0" mnemonicParsing="false" style="-fx-background-color: #01579B; -fx-border-color: #ffffff; -fx-border-width: 2;" text="ACCOUNT" textFill="WHITE" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#logoutAccount" text="LOGOUT         " />
+              </items>
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </MenuButton>
+            <Label fx:id="userLabel" alignment="CENTER_RIGHT" layoutX="538.0" layoutY="18.0" prefHeight="26.0" prefWidth="354.0" text="USER" textFill="WHITE" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="Calibri" size="19.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER" size="20.0" />
+               </graphic>
+            </Label>
+            <ImageView fitHeight="114.0" fitWidth="134.0" layoutX="64.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../lib/images/hostel.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="550.0" prefWidth="250.0" style="-fx-background-color: #141937;" stylesheets="@../../lib/css/app.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="750.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <VBox layoutX="25.0" layoutY="26.0" prefHeight="540.0" prefWidth="230.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="homeButton" onAction="#loadHomeDetail" onMousePressed="#setSelection" prefHeight="50.0" prefWidth="230.0" style="-fx-border-color: #ffffff; -fx-background-color: #01579B; -fx-border-width: 1;" styleClass="JFXButton" text="HOME" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="roomButton" onAction="#loadRoomDetail" onMousePressed="#setSelection" prefHeight="50.0" prefWidth="230.0" style="-fx-border-color: #ffffff; -fx-background-color: #141937; -fx-border-width: 1;" styleClass="JFXButton" text="ROOM MANAGEMENT" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="studentButton" onAction="#loadStudentDetail" onMousePressed="#setSelection" prefHeight="50.0" prefWidth="230.0" style="-fx-border-color: #ffffff; -fx-background-color: #141937; -fx-border-width: 1;" styleClass="JFXButton" text="STUDENT MANAGEMENT" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="reserveButton" onAction="#loadReservationDetail" onMousePressed="#setSelection" prefHeight="50.0" prefWidth="230.0" style="-fx-border-color: #ffffff; -fx-background-color: #141937; -fx-border-width: 1;" styleClass="JFXButton" text="RESERVE MANAGEMENT" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="userButton" onAction="#loadUserDetail" onMousePressed="#setSelection" prefHeight="50.0" prefWidth="230.0" style="-fx-border-color: #ffffff; -fx-background-color: #141937; -fx-border-width: 1;" styleClass="JFXButton" text="USER MANAGEMENT" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="detailPane" prefHeight="550.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="540.0" stroke="#141937" strokeType="INSIDE" strokeWidth="3.0" width="740.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="172.0" layoutY="90.0" prefHeight="44.0" prefWidth="828.0" text="H O S T E L   M A N A G E M E N T   S Y S T E M" textFill="WHITE" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="Calibri Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="174.0" layoutY="44.0" prefHeight="44.0" prefWidth="828.0" text="S E R E N E   H O S T E L S - M A L A B E" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="41.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

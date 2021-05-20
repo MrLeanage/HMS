@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="540.0" stroke="#01579b" strokeType="INSIDE" strokeWidth="3.0" width="740.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <ImageView fitHeight="275.0" fitWidth="733.0" layoutX="67.0" layoutY="140.0" pickOnBounds="true" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0">
+         <image>
+            <Image url="@../../lib/images/Cover%201.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="5.0" layoutY="80.0" prefHeight="44.0" prefWidth="740.0" text="S E R E N E   H O S T E L S - M A L A B E" textFill="#141937" AnchorPane.leftAnchor="5.0">
+         <font>
+            <Font name="Calibri Bold" size="41.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
